@@ -1,0 +1,54 @@
+.dostavka {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px !important;
+  h1 {
+    color: rgb(69, 69, 69);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 110%;
+    width: 319px;
+  }
+  .dostavka__right {
+    h2 {
+      color: rgb(0, 0, 0);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 140%;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 140%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 740px;
+      span {
+        color: #2f4da3;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .dostavka {
+    flex-direction: column;
+    h1 {
+      width: 100%;
+      font-size: 28px;
+    }
+    .dostavka__right {
+      p {
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.map {
+  padding-top: 50px !important;
+  .maps {
+    width: 100%;
+  }
+}

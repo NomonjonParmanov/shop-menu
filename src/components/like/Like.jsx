@@ -1,20 +1,15 @@
-import React from "react";
-import { useGetProductsQuery } from "../../context/productApi";
-import { FaRegHeart, FaCartPlus, FaHeart } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import React, { memo } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleToWishes } from "../../context/wishlistSlice";
+import { FaRegHeart, FaHeart, FaCartPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { addToCart } from "../../context/cartSlice";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
-const Products = () => {
-  let wishes = useSelector((state) => state.wishlist.value);
-  console.log(wishes);
-  const dispatch = useDispatch();
-  const { data } = useGetProductsQuery();
-  let slice = data?.slice(0, 8);
-  let product = slice?.map((el) => (
+const Like = () => {
+  let dispatch = useDispatch();
+  const wishes = useSelector((state) => state.wishlist.value);
+  let card = wishes?.map((el) => (
     <div key={el.id} className="card">
       <Link to={`/product/${el.id}`}>
         <img src={el.image} alt={el.title} />
@@ -48,20 +43,18 @@ const Products = () => {
       </button>
     </div>
   ));
-  return (
-    <div className="container products">
-      <div className="product__header">
-        <h1>Популярные товары</h1>
-        <button>Все товары</button>
-      </div>
-      <div className="product__cards">{product}</div>
-      <button className="all">Все товары</button>
+  return wishes.length > 0 ? (
+    <div className="container like">
+      <h1>Избранные товары</h1>
+      <div className="cards">{card}</div>
       <ToastContainer
         autoClose={400}
         style={{ left: 0, bottom: 10, width: 250 }}
       />
     </div>
+  ) : (
+    <h2>empty</h2>
   );
 };
 
-export default Products;
+export default memo(Like);

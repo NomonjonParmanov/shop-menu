@@ -6,8 +6,9 @@ const Hero = () => {
       <div className="hero__content">
         <div className="hero__title">
           <h1>Скидка 15% на все подвесные</h1>
-          <div className="line"></div>
-          <h1 className="h1">до 5 февраля</h1>
+          <div className="line">
+            <h1 className="h1">до 5 февраля</h1>
+          </div>
         </div>
         <div className="hero__img">
           <img src={hero} alt="" />

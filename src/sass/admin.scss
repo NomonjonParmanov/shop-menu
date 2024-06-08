@@ -1,0 +1,112 @@
+.dashboard {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgb(69, 69, 69);
+  width: 340px;
+  height: 100vh;
+  padding: 30px;
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: -1px;
+    a {
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+    }
+  }
+  h2 {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    a {
+      color: rgb(255, 255, 255);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: -1px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .active {
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .icon {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.create {
+  margin-left: 430px;
+  padding-top: 30px;
+  h1 {
+    color: rgb(69, 69, 69);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 110%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    input {
+      border-radius: 10px;
+      background: rgb(248, 248, 248);
+      outline: none;
+      border: none;
+      padding-left: 10px;
+      width: 620px;
+      height: 40px;
+    }
+    label {
+      color: rgb(76, 76, 76);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 160%;
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+    textarea {
+      resize: none;
+      border-radius: 10px;
+      background: rgb(248, 248, 248);
+      width: 620px;
+      height: 134px;
+      outline: none;
+      padding-top: 10px;
+      padding-left: 10px;
+    }
+    select {
+      border-radius: 10px;
+      background: rgb(248, 248, 248);
+      width: 620px;
+      height: 40px;
+      outline: none;
+      border: none;
+      padding-left: 10px;
+    }
+    button {
+      border-radius: 5px;
+      background: rgb(69, 69, 69);
+      width: 180px;
+      height: 46px;
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 123%;
+      transition: 0.3s;
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid gray;
+      }
+    }
+  }
+}
