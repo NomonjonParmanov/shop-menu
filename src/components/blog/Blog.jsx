@@ -1,5 +1,6 @@
 import React from "react";
 import { BLOG } from "../../static";
+import { NavLink } from "react-router-dom";
 const Blog = () => {
   let blog = BLOG?.map((el) => (
     <div key={el.id} className="card">
@@ -12,10 +13,14 @@ const Blog = () => {
     <div className="container blog">
       <div className="blog__title">
         <h1>Блог</h1>
-        <button>Перейти в блог</button>
+        <button>
+          <NavLink to={"/blog"}>Перейти в блог</NavLink>
+        </button>
       </div>
       <div className="cards">{blog}</div>
-      <button className="media__btn">Перейти в блог</button>
+      <button className="media__btn">
+        <NavLink to={"/blog"}>Перейти в блог</NavLink>
+      </button>
 
       <div className="blog__title2">
         <h1>Производство светильников</h1>

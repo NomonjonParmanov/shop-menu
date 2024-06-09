@@ -10,11 +10,9 @@ import Contact from "./pages/Contact";
 import BlogPage from "./pages/BlogPage";
 import Admin from "./auth/Admin";
 import Footer from "./components/footer/Footer";
-import CreateProduct from "./components/createProducts/CreateProduct";
-import EditProduct from "./components/editProducts/EditProduct";
-import CreateCategory from "./components/createCategory/CreateCategory";
-import EditCategory from "./components/editCategory/EditCategory";
+import Cart from "./pages/Cart";
 import Wishlist from "./pages/Wishlist";
+import Detail from "./pages/Detail";
 
 function App() {
   const location = useLocation();
@@ -33,6 +31,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:id" element={<Detail />} />
         <Route path="/admin/*" element={<Admin />} />
       </Routes>
       {!isAdminRoute && <Footer />}

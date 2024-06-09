@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BLOG } from "../static";
 const BlogPage = () => {
   let blog = BLOG?.map((el) => (
@@ -8,6 +8,9 @@ const BlogPage = () => {
       <p>{el.data}</p>
     </div>
   ));
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
   return (
     <div className="container blog__page">
       <h1>Блог</h1>

@@ -1,5 +1,6 @@
 import React from "react";
 import { NORNLIGHT } from "../../static";
+import { NavLink } from "react-router-dom";
 const NornLight = () => {
   let norn = NORNLIGHT?.map((el) => (
     <div key={el.id} className="card">
@@ -12,10 +13,15 @@ const NornLight = () => {
     <div className="container light">
       <div className="ligth__title">
         <h1>Почему NORNLIGHT?</h1>
-        <button>О компании</button>
+        <button>
+          <NavLink to={"/about"}>О компании</NavLink>
+        </button>
       </div>
       <div className="cards">{norn}</div>
-      <button className="media__btn">О компании</button>
+      <button className="media__btn">
+        {" "}
+        <NavLink to={"/about"}>О компании</NavLink>
+      </button>
     </div>
   );
 };

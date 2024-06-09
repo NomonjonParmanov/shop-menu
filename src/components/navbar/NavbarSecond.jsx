@@ -6,12 +6,15 @@ import {
   IoMdCart,
   IoMdPerson,
 } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 const NavbarSecond = () => {
   return (
     <div className="container navbar__second">
       <div className="second__content">
-        <img src={logo} alt="" />
+        <NavLink to={"/"}>
+          <img src={logo} alt="" />
+        </NavLink>
         <button className="catalog">Каталог</button>
         <form action="">
           <input type="text" placeholder="Поиск по товарам" />
@@ -21,19 +24,25 @@ const NavbarSecond = () => {
         </form>
         <div className="icon">
           <button>
-            <IoIosHeartEmpty />
+            <NavLink to={"/wishlist"}>
+              <IoIosHeartEmpty />
+            </NavLink>
           </button>
           <p>Избранное</p>
         </div>{" "}
         <div className="icon">
           <button>
-            <IoMdCart />
+            <NavLink to={"/cart"}>
+              <IoMdCart />
+            </NavLink>
           </button>
           <p>Корзина</p>
         </div>{" "}
         <div className="icon">
           <button>
-            <IoMdPerson />
+            <NavLink to={"/register"}>
+              <IoMdPerson />
+            </NavLink>
           </button>
           <p>регистрация</p>
         </div>

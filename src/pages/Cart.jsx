@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
-import Like from "../components/like/Like";
-
-const Wishlist = () => {
+import CartContent from "../components/cart/CartContent";
+const Cart = () => {
   useEffect(() => {
     scrollTo(0, 0);
   }, []);
   return (
     <div>
-      <Like />
+      <CartContent />
     </div>
   );
 };
 
-export default Wishlist;
+export default Cart;

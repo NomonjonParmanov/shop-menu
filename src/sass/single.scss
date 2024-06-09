@@ -1,0 +1,204 @@
+.single {
+  padding-top: 40px !important;
+  .single2 {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    .single__img {
+      img {
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+      }
+    }
+    .single__content {
+      h1 {
+        color: rgb(69, 69, 69);
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 110%;
+        padding-bottom: 10px;
+        width: 595px;
+      }
+      p {
+        color: rgb(179, 179, 179);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 160%;
+        padding-top: 5px;
+      }
+      .have {
+        color: rgb(77, 147, 44);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 160%;
+      }
+      h2 {
+        color: rgb(16, 16, 16);
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 160%;
+        letter-spacing: 1%;
+        padding-top: 10px;
+        span {
+          color: rgb(179, 179, 179);
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 160%;
+          letter-spacing: 1%;
+          text-decoration-line: line-through;
+        }
+      }
+      .decs {
+        color: rgb(76, 76, 76);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 160%;
+        padding-bottom: 20px;
+        width: 607px;
+      }
+      .bts {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .none {
+          display: none;
+        }
+        .btns {
+          display: flex;
+          align-items: center;
+          border: 1px solid rgb(69, 69, 69, 0.1);
+          border-radius: 10px;
+          .btn1,
+          .btn3 {
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: -1px;
+            .icon {
+              color: rgb(172, 172, 172);
+            }
+          }
+          .btn2 {
+            border-radius: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            background-color: transparent;
+          }
+        }
+        .delete {
+          font-size: 30px;
+          color: gray;
+          margin-left: 30px;
+          background-color: transparent;
+        }
+        .btn4 {
+          border-radius: 10px;
+          width: 180px;
+          height: 52px;
+          color: rgb(255, 255, 255);
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 123%;
+          background: rgb(69, 69, 69);
+          transition: 0.5s;
+          &:hover {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid gray;
+          }
+        }
+        .btn5 {
+          font-size: 30px;
+          background-color: transparent;
+          .red {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .single {
+    padding-top: 0 !important;
+    .single2 {
+      flex-direction: column;
+      align-items: normal;
+      gap: 0px;
+      .single__content {
+        width: 100%;
+        h1 {
+          width: 100%;
+          font-size: 28px;
+          padding-top: 0;
+        }
+        h3 {
+          font-size: 28px;
+          span {
+            font-size: 16px;
+          }
+        }
+        .decs {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.details {
+  padding-top: 100px !important;
+  h1 {
+    color: rgb(69, 69, 69);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 110%;
+  }
+  .card,
+  .card2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    p {
+      color: rgb(76, 76, 76);
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 160%;
+      letter-spacing: 1%;
+      width: 606.5px;
+      text-align: right;
+    }
+    .title {
+      color: rgb(16, 16, 16);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 123%;
+      text-align: start;
+    }
+  }
+  .card2 {
+    background: rgb(248, 248, 248);
+  }
+}
+
+@media (max-width: 550px) {
+  .details {
+    h1 {
+      font-size: 28px;
+    }
+    .card,
+    .card2 {
+      flex-direction: column;
+      gap: 5px;
+      p {
+        width: 100%;
+        text-align: start;
+      }
+    }
+  }
+}

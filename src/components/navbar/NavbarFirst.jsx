@@ -15,22 +15,22 @@ const NavbarFirst = () => {
       <div className=" first__navbar">
         <ul>
           <li>
-            <NavLink>О компании</NavLink>
+            <NavLink to={"/about"}>О компании</NavLink>
           </li>{" "}
           <li>
-            <NavLink>Доставка и оплата</NavLink>
+            <NavLink to={"/shipping"}>Доставка и оплата</NavLink>
           </li>{" "}
           <li>
-            <NavLink>Возврат</NavLink>
+            <NavLink to={"/return"}>Возврат</NavLink>
           </li>{" "}
           <li>
-            <NavLink>Гарантии</NavLink>
+            <NavLink to={"/garant"}>Гарантии</NavLink>
           </li>{" "}
           <li>
-            <NavLink>Контакты</NavLink>
+            <NavLink to={"/contact"}>Контакты</NavLink>
           </li>{" "}
           <li>
-            <NavLink>Блог</NavLink>
+            <NavLink to={"/blog"}>Блог</NavLink>
           </li>
         </ul>
         <ul>
@@ -46,36 +46,44 @@ const NavbarFirst = () => {
             <button onClick={() => setToggle(!toggle)}>
               {toggle ? <IoMdClose /> : <IoIosMenu />}
             </button>
-            <img src={miniLogo} alt="" />
+            <NavLink to={"/"}>
+              <img src={miniLogo} alt="" />
+            </NavLink>
           </div>
           <div className="menu2">
             <button>
-              <IoIosHeartEmpty />
+              <NavLink to={"/wishlist"}>
+                <IoIosHeartEmpty />
+              </NavLink>
             </button>
             <button>
-              <IoMdCart />
+              <NavLink to={"/cart"}>
+                <IoMdCart />
+              </NavLink>
             </button>
             <button>
-              <IoMdPerson />
+              <NavLink to={"/register"}>
+                <IoMdPerson />
+              </NavLink>
             </button>
           </div>
         </div>
         <div className={`${toggle ? "mobile__content" : "mobile"}`}>
           <ul>
             <li>
-              <NavLink>О компании</NavLink>
+              <NavLink to={"/about"}>О компании</NavLink>
             </li>{" "}
             <li>
-              <NavLink>Доставка и оплата</NavLink>
+              <NavLink to={"/shipping"}>Доставка и оплата</NavLink>
             </li>{" "}
             <li>
-              <NavLink>Возврат</NavLink>
+              <NavLink to={"/return"}>Возврат</NavLink>
             </li>{" "}
             <li>
-              <NavLink>Гарантии</NavLink>
+              <NavLink to={"/garant"}>Гарантии</NavLink>
             </li>{" "}
             <li>
-              <NavLink>Контакты</NavLink>
+              <NavLink to={"/blog"}>Контакты</NavLink>
             </li>{" "}
             <li>
               <NavLink>Блог</NavLink>

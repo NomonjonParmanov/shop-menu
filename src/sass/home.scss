@@ -104,6 +104,7 @@
     display: none;
   }
   .first__navbar__mobile {
+    background-color: white;
     display: block;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -112,6 +113,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       .menu {
         display: flex;
         align-items: center;
@@ -239,7 +241,6 @@
     align-items: center;
     padding: 20px;
     margin-top: 30px;
-
     h1 {
       width: 388px;
       font-size: 64px;
@@ -255,6 +256,7 @@
       .h1 {
         text-align: center;
         color: #fff;
+        text-align: start;
         padding-left: 20px;
       }
     }
@@ -274,6 +276,11 @@
       .line {
         width: 208px;
         height: 44px;
+        .h1 {
+          font-size: 20px;
+          padding: 0;
+          text-align: center;
+        }
       }
       img {
         width: 275px;

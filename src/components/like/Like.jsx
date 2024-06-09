@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { addToCart } from "../../context/cartSlice";
 import "react-toastify/dist/ReactToastify.css";
+import Empty from "../empty/Empty";
 const Like = () => {
   let dispatch = useDispatch();
   const wishes = useSelector((state) => state.wishlist.value);
@@ -53,7 +54,7 @@ const Like = () => {
       />
     </div>
   ) : (
-    <h2>empty</h2>
+    <Empty />
   );
 };
 
