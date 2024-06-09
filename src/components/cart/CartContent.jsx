@@ -39,6 +39,7 @@ const CartContent = () => {
     api.open("GET", url, true);
     api.send();
     toast.success("buyurtma qabul qilingdi");
+    window.location.reload();
   };
   const carts = useSelector((state) => state.cart.value);
   const dispatch = useDispatch();

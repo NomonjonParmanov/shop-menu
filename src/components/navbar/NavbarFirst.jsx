@@ -9,6 +9,7 @@ import {
 } from "react-icons/io";
 import miniLogo from "../../assets/miniLogo.png";
 const NavbarFirst = () => {
+  let tokens = localStorage.getItem("token");
   const [toggle, setToggle] = useState(false);
   return (
     <div className="container">
@@ -62,9 +63,15 @@ const NavbarFirst = () => {
               </NavLink>
             </button>
             <button>
-              <NavLink to={"/register"}>
-                <IoMdPerson />
-              </NavLink>
+              {tokens ? (
+                <NavLink to={"/admin"}>
+                  <IoMdPerson />
+                </NavLink>
+              ) : (
+                <NavLink to={"/register"}>
+                  <IoMdPerson />
+                </NavLink>
+              )}
             </button>
           </div>
         </div>

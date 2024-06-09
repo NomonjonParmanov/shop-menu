@@ -105,3 +105,41 @@
     }
   }
 }
+
+.not {
+  img {
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+    object-fit: contain;
+  }
+  button {
+    display: block;
+    border-radius: 100px;
+    width: 400px;
+    background: rgb(69, 69, 69);
+    height: 50px;
+    a {
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+    transition: 0.4s;
+    margin: 0 auto;
+    &:hover {
+      background: #fff;
+      border: 1px solid gr;
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .not {
+    button {
+      width: 100%;
+    }
+  }
+}

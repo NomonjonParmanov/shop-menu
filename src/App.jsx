@@ -13,6 +13,10 @@ import Footer from "./components/footer/Footer";
 import Cart from "./pages/Cart";
 import Wishlist from "./pages/Wishlist";
 import Detail from "./pages/Detail";
+import AllProducts from "./components/allProducts/AllProducts";
+import NotFound from "./components/notFound/NotFound";
+import Login from "./pages/Login";
+import Auth from "./auth/Auth";
 
 function App() {
   const location = useLocation();
@@ -31,9 +35,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/allProducts" element={<AllProducts />} />
+        <Route path="*" element={<NotFound />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/register" element={<Login />} />
         <Route path="/product/:id" element={<Detail />} />
-        <Route path="/admin/*" element={<Admin />} />
+        <Route path="/" element={<Auth />}>
+          <Route path="/admin/*" element={<Admin />} />
+        </Route>
       </Routes>
       {!isAdminRoute && <Footer />}
     </>

@@ -7,14 +7,12 @@ import { toggleToWishes } from "../../context/wishlistSlice";
 import { ToastContainer, toast } from "react-toastify";
 import { addToCart } from "../../context/cartSlice";
 import "react-toastify/dist/ReactToastify.css";
-import { Link, NavLink } from "react-router-dom";
-const Products = () => {
+import { Link } from "react-router-dom";
+const AllProducts = () => {
   let wishes = useSelector((state) => state.wishlist.value);
-  console.log(wishes);
   const dispatch = useDispatch();
   const { data } = useGetProductsQuery();
-  let slice = data?.slice(0, 8);
-  let product = slice?.map((el) => (
+  let product = data?.map((el) => (
     <div key={el.id} className="card">
       <Link to={`/product/${el.id}`}>
         <img src={el.image} alt={el.title} />
@@ -50,16 +48,7 @@ const Products = () => {
   ));
   return (
     <div className="container products">
-      <div className="product__header">
-        <h1>Популярные товары</h1>
-        <button>
-          <NavLink to={"/allProducts"}>Все товары</NavLink>
-        </button>
-      </div>
       <div className="product__cards">{product}</div>
-      <button className="all">
-        <NavLink to={"/allProducts"}>Все товары</NavLink>
-      </button>
       <ToastContainer
         autoClose={400}
         style={{ left: 0, bottom: 10, width: 250 }}
@@ -68,4 +57,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default AllProducts;

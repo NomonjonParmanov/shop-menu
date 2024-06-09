@@ -7,7 +7,13 @@ import CreateProduct from "../components/createProducts/CreateProduct";
 import EditProduct from "../components/editProducts/EditProduct";
 import CreateCategory from "../components/createCategory/CreateCategory";
 import EditCategory from "../components/editCategory/EditCategory";
+import { CiLogout } from "react-icons/ci";
 
+const handleLogOut = () => {
+  localStorage.removeItem("token");
+  window.location.reload();
+  navigate("/login");
+};
 const Admin = () => {
   return (
     <>
@@ -48,6 +54,10 @@ const Admin = () => {
             Manage category
           </NavLink>
         </h2>
+        <button onClick={handleLogOut}>
+          <CiLogout />
+          Log Out
+        </button>
       </div>
     </>
   );
