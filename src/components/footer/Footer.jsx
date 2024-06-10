@@ -1,6 +1,7 @@
 import React from "react";
 import miniImg from "../../assets/miniLogo.png";
 import pay from "../../assets/pay.png";
+import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer">
@@ -16,13 +17,25 @@ const Footer = () => {
           <div className="footer__card">
             <h3>Покупателям</h3>
             <ul>
-              <li>О компании</li>
-              <li>Доставка и оплата</li>
-              <li>Возврат</li>
-              <li>О компании</li>
-              <li>Гарантии</li>
-              <li>Контакты</li>
-              <li>Блог</li>
+              {" "}
+              <li>
+                <NavLink to={"/shipping"}>Доставка и оплата</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/return"}>Возврат</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/about"}>О компании</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/garant"}>Гарантии</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/contact"}>Контакты</NavLink>
+              </li>
+              <li>
+                <NavLink to={"/blog"}>Блог</NavLink>
+              </li>
             </ul>
           </div>
           <div className="footer__card">
