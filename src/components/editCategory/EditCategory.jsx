@@ -17,6 +17,7 @@ const EditCategory = () => {
     <div className="card" key={el.id}>
       <h2>{el.title}</h2>
       <button
+        style={{ backgroundColor: "transparent" }}
         onClick={() => handleDeleteProducts(el.id)}
         className="btn btn-delete"
       >
